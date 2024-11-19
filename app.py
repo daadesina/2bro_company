@@ -10,6 +10,10 @@ def home():
 def profile():
     return render_template('profile.html')
 
+@app.route('/part')
+def part():
+    return render_template('part.html')
+
 
 
 if __name__ == '__main__':

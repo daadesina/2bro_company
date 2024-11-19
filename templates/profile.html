@@ -1,52 +1,62 @@
 {% extends "home.html" %}
 
 {% block content %}
+<div>
+    <div id="profile_header" class="m-3">
+        <div class=" flex justify-around bg-blue-900 text-white rounded-lg p-2 italic mb-4">
+            <p class=" w-3/5">Participant List</p>
+            <p class=" w-2/5">Medical Records</p>
+            <p>Action</p>
+        </div>
 
-<div class="m-3 rounded-lg">
-    <table class=" w-full text-center rounded-lg">
-        <thead class="bg-blue-900 text-white">
-            <th>Participant List</th>
-            <th>Medical Records</th>
-            <th>Action</th>
-        </thead>
-        <tbody class="">
-            <tr>
-                <td class="flex justify-center">
-                    <div class=" flex gap-2 items-center">
+        <div id="profile_body" class="flex justify-around">
+            <div id="profile_left" class=" w-3/5">
+                <div id="first_pl" class="h-[8vw]">
+                    <div class=" flex gap-2 items-center border border-solid shadow-black shadow-sm w-fit">
                         <div>
                             <img src="../static/image/participant.jpg" class=" h-[7vw] rounded-lg" alt="profile pic">
                         </div>
-                        <div class=" text-left text-[1.2vw] font-semibold">
-                            <label class=" pr-[5vw]">Name:</label>
+                        <div class=" text-left text-[1vw] font-semibold">
+                            <label class=" ">Name:</label>
                             <span>Jonathan Duke</span>
                             <br>
-                            <label class="pr-[0.5vw]">Date of Birth:</label>
+                            <label class="">Date of Birth:</label>
                             <span>1/10/2024</span>
                             <br>
-                            <label class=" pr-[4.8vw]">Phone:</label>
+                            <label class=" ">Phone:</label>
                             <span>xxx-xxx-xxxx</span>
                             <br>
-                            <label class=" pr-[3.8vw]">Address:</label>
+                            <label class=" ">Address:</label>
                             <span>New york</span>
                         </div>
                     </div>
-                </td>
+                </div>
+            </div>
 
-                <td>11</td>
-                <td>11</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-            </tr>
-        </tbody>
-    </table>
+            <div id="profile_middle" class=" w-2/5">
+                <div id="first_pm">
+                    <div class="flex h-[8vw] items-center">
+                        <img src="../static/image/drug_book.png" alt="drug book" class="h-[6vw]">
+                        <img src="../static/image/pen_book.png" alt="pen book" class="h-[6vw]">
+                        <img src="../static/image/note_book.png" alt="note book" class="h-[6vw]">
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile_right">
+                <div id="first_pr">
+                    <div class="flex text-sm gap-2 items-center h-[8vw]">
+                        <i class="fa-solid fa-pencil text-white bg-blue-500 p-[1vw] rounded-sm"></i>
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 {% endblock %}

@@ -1,0 +1,50 @@
+/* Switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 6vw; /* Scales with the viewport width */
+    height: 3vw; /* Adjusted for proportional height */
+  }
+
+  /* Hide the default checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* Slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 3vw; /* Makes the slider rounded */
+  }
+
+  /* Circle inside the slider */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 2vw; /* Scaled circle size */
+    width: 2vw; /* Match height for the circle */
+    left: 0.4vw; /* Adjust spacing */
+    bottom: 0.4vw; /* Adjust spacing */
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  /* When checked, change the slider color */
+  input:checked + .slider {
+    background-color: #475aca;
+  }
+
+  /* Move the circle when checked */
+  input:checked + .slider:before {
+    transform: translateX(3vw); /* Match new switch width */
+  }
