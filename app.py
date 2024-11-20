@@ -30,5 +30,9 @@ def indexZ ():
 def create ():
     return render_template('create_participant.html')
 
+@app.route('/caregiver')
+def caregiver():
+    return render_template('caregiver.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

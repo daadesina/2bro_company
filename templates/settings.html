@@ -1,5 +1,12 @@
 {% extends "home.html" %}
 
+{% block theme %}
+<div class=" border border-solid rounded-full bg-blue-900 text-white w-full flex items-center text-sm p-1">
+    <input type="search" name="search" id="" placeholder="Search" class=" pl-3 w-full rounded-r-full bg-blue-900">
+    <i class="fa-solid fa-magnifying-glass"></i>
+</div>
+{% endblock %}
+
 {% block participant %}
 Participants - <span class=" italic font-thin">Jonathan Duke</span>
 {% endblock %}
@@ -20,10 +27,10 @@ Participants - <span class=" italic font-thin">Jonathan Duke</span>
         <img src="../static/image/profile.png" alt="profile" class=" h-[8vw]">
         <p>Profile</p>
     </div>
-    <div>
+    <a href="/prescription">
         <img src="../static/image/medication.png" alt="medication" class=" h-[8vw]">
         <p>Medication</p>
-    </div>
+    </a>
     <div>
         <img src="../static/image/vitals.png" alt="vitals" class=" h-[8vw]">
         <p>Vitals</p>
@@ -41,4 +48,8 @@ Participants - <span class=" italic font-thin">Jonathan Duke</span>
         <p>In & Out Logs</p>
     </div>
 </div>
+{% endblock %}
+
+{% block create_form %}
+
 {% endblock %}
