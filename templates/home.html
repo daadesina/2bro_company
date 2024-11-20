@@ -8,8 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c5e4d5e6fa.js" crossorigin="anonymous"></script>
     <title>2BRO COMPANY </title>
+    
 </head>
-<body class=" bg-blue-950">
+<body class=" bg-blue-950 text-sm">
     <div class="relative">
         <div class="" id="home_div">
             <div id="container" class=" flex gap-5 m-4 h-[94vh]">
@@ -23,15 +24,15 @@
                                     <div class=" flex justify-end mb-2">
                                         <div class=" flex items-center gap-1">
                                             <img src="../static/image/logo.png" alt="2BRO logo" class=" h-[1.3vw] m-[0.2]"/>
-                                            <a href="/" class=" text-blue-900 font-bold text-[1.7vw]">2BRO COMPANY</a>
+                                            <a href="/" class=" text-blue-900 font-bold">2BRO COMPANY</a>
                                         </div>
                                     </div>
                                     {% block theme %}
                                     <div class=" flex justify-end ">
                                         
-                                        <button id="theme_btn" class=" bg-blue-900 text-white p-[0.7vw] text-[1.2vw] rounded-full">
-                                            <i class="fa-brands fa-affiliatetheme"></i>
-                                            Select theme
+                                        <button id="theme_btn" class=" bg-blue-900 text-white p-[0.7vw] rounded-full flex gap-3">
+                                            <img src="../static/image/theme.png" alt="">
+                                            <p>Select theme</p>
                                         </button>
                                         
                                     </div>
@@ -39,7 +40,7 @@
                                 </div>
                             </div>
                             <hr class=" mt-5 border-solid border-black mb-5"/>
-                            <div class=" text-[1.5vw]">
+                            <div class="">
                                 <div>
                                     <div class=" flex justify-between" role="button" id="profile_btn">
                                         <div>
@@ -84,9 +85,9 @@
                             </div>
                         </div>
 
-                        <div class="text-[1.3vw] text-center border border-dotted border-black p-3 rounded-lg">
+                        <div class=" text-center border border-dotted border-black p-3 rounded-lg">
                             <div class=" flex justify-center mb-2">
-                                <img src="../static/image/lady.webp" alt="profile picture" class=" h-[4vw] w-[5vw] rounded-full">
+                                <img src="../static/image/user.png" alt="profile picture" class="">
                             </div>
                             <div>
                                 <p class=" font-semibold">Emily Grace</p>
@@ -104,7 +105,7 @@
 
                 <div 
                     id="right_side"
-                    class=" w-4/5 text-[1.5vw] flex flex-col justify-between"
+                    class=" w-4/5 flex flex-col justify-between"
                     >
                     <div class=" bg-white mb-3 rounded-lg p-3">
                         <div class=" flex justify-between items-center mb-2">
@@ -156,7 +157,7 @@
         {% block create_form %}
         <!-- Create Participant Form -->
         <div class=" mt-10 hidden" id="create_parti_div">
-            <div class="flex justify-center items-center text-[1.5vw]">
+            <div class="flex justify-center items-center">
                 <div class="h-3/4 w-2/4 p-3 rounded-xl" style="background: linear-gradient(to bottom, white 7%, #013263 5%);">
                     <div class=" flex justify-center">
                         <img src="../static/image/lady.webp" alt="profile picture" class=" h-[7vw] rounded-full">
