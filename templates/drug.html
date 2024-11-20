@@ -1,0 +1,37 @@
+{% extends "home.html" %}
+
+
+{% block participant %}
+Participants - <span class=" italic font-thin">Frank Edwards</span>
+{% endblock %}
+
+{% block back %}
+<div class=" text-white bg-blue-900 p-1 pr-2 pl-2 rounded-full">
+    <i class="fa-solid fa-arrow-left"></i>
+</div>
+{% endblock %}
+
+{% block create %}
+<button class=" bg-blue-900 text-white p-2 rounded-lg">Create Prescription <span class="ml-1">+</span></button>
+{% endblock %}
+
+{% block content %}
+<div>
+    <div id="drug_header" class="m-3">
+        <table class=" w-full text-center text-[1vw]">
+            <thead class="bg-blue-900 text-white italic">
+                <th class=" rounded-l-lg border-r-2 p-1">Drug</th>
+                <th class="border-r-2 p-1">Date</th>
+                <th class="border-r-2 p-1">Time</th>
+                <th class="border-r-2 p-1">Date From</th>
+                <th class="border-r-2 p-1">Date To</th>
+                <th class="border-r-2 p-1">Quantity</th>
+                <th class="border-r-2 p-1">Frequency</th>
+                <th class="border-r-2 p-1">Todays Frequency</th>
+                <th class="border-r-2 p-1">Place</th>
+                <th class="rounded-r-lg p-1">Action</th>
+            </thead>
+        </table>
+    </div>
+</div>
+{% endblock %}

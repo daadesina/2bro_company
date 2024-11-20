@@ -1,47 +1,50 @@
 {% extends "home.html" %}
 
 {% block content %}
+<div>
+    <div id="profile_header" class="m-3">
+        <div class=" flex justify-around bg-blue-900 text-white rounded-lg p-2 italic mb-4">
+            <p class=" w-3/5">Participant List</p>
+            <p class=" w-2/5">Medical Records</p>
+            <p>Action</p>
+        </div>
 
-<div class="m-3 rounded-lg">
-    <table class=" w-full text-center">
-        <thead class="bg-blue-900 text-white italic">
-            <th class=" rounded-l-lg p-2">Participant List</th>
-            <th class="p-2">Medical Records</th>
-            <th class="rounded-r-lg p-2">Action</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td class=" mt-2">
+        <div id="profile_body" class="flex justify-around">
+            <div id="profile_left" class=" w-3/5">
+                <div id="first_pl" class="h-[8vw]">
                     <div class=" flex gap-2 items-center border border-solid shadow-black shadow-sm w-fit">
                         <div>
                             <img src="../static/image/participant.jpg" class=" h-[7vw] rounded-lg" alt="profile pic">
                         </div>
-                        <div class=" text-left text-[1.2vw] font-semibold">
-                            <label class=" pr-[4.6vw]">Name:</label>
+                        <div class=" text-left text-[1vw] font-semibold">
+                            <label class=" ">Name:</label>
                             <span>Jonathan Duke</span>
                             <br>
-                            <label class="pr-[0.9vw]">Date of Birth:</label>
+                            <label class="">Date of Birth:</label>
                             <span>1/10/2024</span>
                             <br>
-                            <label class=" pr-[4.6vw]">Phone:</label>
+                            <label class=" ">Phone:</label>
                             <span>xxx-xxx-xxxx</span>
                             <br>
-                            <label class=" pr-[3.8vw]">Address:</label>
+                            <label class=" ">Address:</label>
                             <span>New york</span>
                         </div>
                     </div>
-                </td>
+                </div>
+            </div>
 
-                <td class=" mt-2">
-                    <div class="flex">
-                        <a href="/drug">
-                            <img src="../static/image/drug_book.png" alt="drug book" class="h-[6vw]">
-                        </a>
+            <div id="profile_middle" class=" w-2/5">
+                <div id="first_pm">
+                    <div class="flex h-[8vw] items-center">
+                        <img src="../static/image/drug_book.png" alt="drug book" class="h-[6vw]">
                         <img src="../static/image/pen_book.png" alt="pen book" class="h-[6vw]">
                         <img src="../static/image/note_book.png" alt="note book" class="h-[6vw]">
                     </div>
-                </td>
-                <td>
+                </div>
+            </div>
+
+            <div id="profile_right">
+                <div id="first_pr">
                     <div class="flex text-sm gap-2 items-center h-[8vw]">
                         <i class="fa-solid fa-pencil text-white bg-blue-500 p-[1vw] rounded-sm"></i>
                         <div>
@@ -51,10 +54,9 @@
                             </label>
                         </div>
                     </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 {% endblock %}

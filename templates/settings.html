@@ -1,0 +1,44 @@
+{% extends "home.html" %}
+
+{% block participant %}
+Participants - <span class=" italic font-thin">Jonathan Duke</span>
+{% endblock %}
+
+{% block back %}
+<div class=" text-white bg-blue-900 p-1 pr-2 pl-2 rounded-full">
+    <i class="fa-solid fa-arrow-left"></i>
+</div>
+{% endblock %}
+
+{% block create %}
+
+{% endblock %}
+
+{% block content %}
+<div class="flex justify-around text-center">
+    <div>
+        <img src="../static/image/profile.png" alt="profile" class=" h-[8vw]">
+        <p>Profile</p>
+    </div>
+    <div>
+        <img src="../static/image/medication.png" alt="medication" class=" h-[8vw]">
+        <p>Medication</p>
+    </div>
+    <div>
+        <img src="../static/image/vitals.png" alt="vitals" class=" h-[8vw]">
+        <p>Vitals</p>
+    </div>
+    <div>
+        <img src="../static/image/daily.png" alt="daily" class=" h-[8vw]">
+        <p>Daily Notes</p>
+    </div>
+    <div>
+        <img src="../static/image/activities.png" alt="activities" class=" h-[8vw]">
+        <p>Activities</p>
+    </div>
+    <div>
+        <img src="../static/image/logs.png" alt="logs" class=" h-[8vw]">
+        <p>In & Out Logs</p>
+    </div>
+</div>
+{% endblock %}

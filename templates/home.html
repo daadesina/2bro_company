@@ -99,7 +99,11 @@
                     <i class="fa-regular fa-bell mr-[10vw]"></i>
                 </div>
                 <div class=" flex justify-between border border-solid p-1 items-center">
-                    <button class=" bg-blue-900 text-white rounded-lg p-1">Participants</button>
+                    <button class=" bg-blue-900 text-white rounded-lg p-1">
+                        {% block participant %}
+                        Participants
+                        {% endblock %}
+                    </button>
                     <div class=" border border-solid rounded-full ">
                         <input type="search" name="search" id="" placeholder="Search" class=" rounded-full pl-3">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -110,9 +114,17 @@
 
 
             <div class=" bg-white mb-3 rounded-lg p-2">
-                <div class="flex justify-between ">
-                    <div></div>
-                    <button class=" bg-blue-900 text-white p-2 rounded-lg">Create participant <span class="ml-1">+</span></button>
+                <div class="flex justify-between items-center ">
+                    <div>
+                        {% block back %}
+                        
+                        {% endblock %}
+                    </div>
+                    <div>
+                        {% block create %}
+                        <button class=" bg-blue-900 text-white p-2 rounded-lg">Create participant <span class="ml-1">+</span></button>
+                        {% endblock %}
+                    </div>
                 </div>
             </div>
 
@@ -125,6 +137,10 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Create Participant Form -->
+     
 
 
     <script src="../static/js/home.js"></script>
