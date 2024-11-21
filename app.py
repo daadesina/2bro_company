@@ -1,10 +1,25 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import requests
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    """
+    Fetch participants from the backend API and render them on profile.html
+    """
+    BACKEND_PARTICIPANT_API_URL = 'https://hospital-segment.onrender.com/participant/list'
+
+    try:
+        response = requests.get(BACKEND_PARTICIPANT_API_URL)
+        if response.status_code == 200:
+            data = response.json()
+            participants = data.get("participants", [])
+        else:
+            participants = [] # for empty list if the API fails
+        return render_template('profile.html', participants=participants)
+    except Exception as e:
+        return({"status": "error", "message": str(e)}), 500
 
 @app.route('/profile')
 def profile():
@@ -22,17 +37,23 @@ def prescription():
 def settings():
     return render_template('settings.html')
 
-@app.route('/indexZ')
-def indexZ ():
-    return render_template('indexZ.html')
-
-@app.route('/create')
-def create ():
-    return render_template('create_participant.html')
-
 @app.route('/caregiver')
 def caregiver():
-    return render_template('caregiver.html')
+    BACKEND_CAREGIVER_API_URL = 'https://hospital-segment.onrender.com/caregiver/details'
+
+    try:
+        response = requests.get(BACKEND_CAREGIVER_API_URL)
+        if response.status_code == 200:
+            data = response.json()
+            caregivers = data.get("caregiver_details", [])
+        else:
+            caregivers = []
+        return render_template('caregiver.html', caregivers=caregivers)
+    except Exception as e:
+        return({"status":"error", "message": str(e)}), 500
+    
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

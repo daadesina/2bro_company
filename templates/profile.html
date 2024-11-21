@@ -3,6 +3,7 @@
 {% block content %}
 
 <div class="m-3 rounded-lg">
+    {% if participants %}
     <table class=" w-full text-center">
         <thead class="bg-blue-900 text-white italic">
             <th class=" rounded-l-lg p-2">Participant List</th>
@@ -10,6 +11,7 @@
             <th class="rounded-r-lg p-2">Action</th>
         </thead>
         <tbody>
+            {% for participant in participants %}
             <tr>
                 <td class=" mt-2">
                     <div class=" flex gap-2 items-center border border-solid shadow-black shadow-sm w-fit">
@@ -18,20 +20,20 @@
                         </div>
                         <div class=" text-left font-semibold">
                             <label class=" pr-[4.6vw]">Name:</label>
-                            <span>Jonathan Duke</span>
+                            <span>{{ participant['Name'] }}</span>
                             <br>
                             <label class="pr-[0.9vw]">Date of Birth:</label>
-                            <span>1/10/2024</span>
+                            <span>{{ participant['Date of Birth'] }}</span>
                             <br>
                             <label class=" pr-[4.6vw]">Phone:</label>
-                            <span>xxx-xxx-xxxx</span>
+                            <span>{{ participant['Phone'] }}</span>
                             <br>
                             <label class=" pr-[3.8vw]">Address:</label>
-                            <span>New york</span>
+                            <span>{{ participant['Phone'] }}</span>
                         </div>
                     </div>
                 </td>
-
+            
                 <td class=" mt-2">
                     <div class="flex">
                         <a href="/drug">
@@ -53,8 +55,12 @@
                     </div>
                 </td>
             </tr>
+            {% endfor %}
         </tbody>
     </table>
+    {% else %}
+        <p>No Participant Found</p>
+    {% endif %}
 </div>
 
 {% endblock %}

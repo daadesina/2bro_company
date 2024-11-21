@@ -19,13 +19,16 @@
 
 {% block content %}
 <div class=" flex justify-center p-3 gap-3 flex-wrap">
+    {% for caregiver in caregivers %}
     <a href="/settings" class=" p-3 border border-solid border-blue-600 flex justify-center items-center shadow-sm shadow-black rounded-xl">
         <div class="">
             <div class="flex justify-center">
                 <img src="../static/image/caregiver.png" alt="profile picture" class=" h-20">
             </div>
-            <p class=" pt-2 text-blue-600 font-bold">Jonathan Duke</p>
+            <p class=" pt-2 text-blue-600 font-bold">{{caregiver.name}}</p>
         </div>
     </a>
+    {% endfor %}
+    
 </div>
 {% endblock %}
