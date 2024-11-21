@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Prescription</title>
+</head>
+<body>
+    <h1>Create a Prescription</h1>
+    <form method="POST" action="/prescribe">
+        <label>Caregiver ID:</label><br>
+        <input type="text" name="caregiver_id" required><br><br>
+
+        <label>Participant ID:</label><br>
+        <input type="text" name="participant_id" required><br><br>
+
+        <label>Drug ID:</label><br>
+        <input type="text" name="drug_id" required><br><br>
+
+        <label>Reason for Medication:</label><br>
+        <input type="text" name="reason_for_medication" required><br><br>
+
+        <label>Prescriber:</label><br>
+        <input type="text" name="prescriber" required><br><br>
+
+        <label>Pharmacy ID:</label><br>
+        <input type="text" name="pharmacy_id" required><br><br>
+
+        <label>Quantity Dosage:</label><br>
+        <input type="number" name="quantity_dosage" required><br><br>
+
+        <label>Refills:</label><br>
+        <input type="number" name="refills" required><br><br>
+
+        <label>Start Date:</label><br>
+        <input type="date" name="start_date" required><br><br>
+
+        <label>Dose:</label><br>
+        <input type="number" name="dose" id="dose" required><br><br>
+
+        <label>Frequency:</label><br>
+        <input type="number" name="frequency" required><br><br>
+
+        <label>Comment:</label><br>
+        <textarea name="comment"></textarea><br><br>
+
+        <div id="dose-times">
+            <!-- Dose time fields will be dynamically added here -->
+        </div>
+
+        <button type="button" onclick="addDoseTimes()">Add Dose Times</button><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function addDoseTimes() {
+            const dose = parseInt(document.getElementById('dose').value);
+            const doseTimesDiv = document.getElementById('dose-times');
+            doseTimesDiv.innerHTML = ''; // Clear previous fields
+
+            for (let i = 1; i <= dose; i++) {
+                const label = document.createElement('label');
+                label.textContent = `Dose Time ${i}:`;
+                doseTimesDiv.appendChild(label);
+
+                const input = document.createElement('input');
+                input.type = 'time';
+                input.name = `dose_time_${i}`;
+                input.required = true;
+                doseTimesDiv.appendChild(input);
+
+                doseTimesDiv.appendChild(document.createElement('br'));
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+alert('Prescription Created Successfully !')

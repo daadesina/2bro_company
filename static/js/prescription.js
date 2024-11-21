@@ -19,3 +19,5 @@ prescription_checkbox.addEventListener('change', updatePrescriptionAction);
 
 // Initialize on page load
 updatePrescriptionAction();
+
+
