@@ -52,7 +52,7 @@
                                         </div>
                                     </div>
                                     <div class=" ml-[2.2vw]" id="profile_part">
-                                        <a href="/profile">
+                                        <a href="/">
                                             <div class=" pt-2 pb-2 w-full">Participants</div>
                                         </a>
                                         <hr class="border-solid border-black" />
@@ -160,10 +160,10 @@
             <div class="flex justify-center items-center">
                 <div class="h-3/4 w-2/4 p-3 rounded-xl" style="background: linear-gradient(to bottom, white 7%, #013263 5%);">
                     <div class=" flex justify-center">
-                        <img src="../static/image/lady.webp" alt="profile picture" class=" h-[7vw] rounded-full">
+                        <img src="../static/image/participant.png" alt="profile picture" class=" h-[7vw] rounded-full">
                     </div>
                     <div>
-                        <form method="post" id="create_participant">
+                        <form action="https://hospital-segment.onrender.com/participant/create/{{ caregiver_id }}"" method="post" id="create_participant">
                             <div class="flex justify-around flex-wrap mt-2">
                                 <div>
                                     <p class="text-white">First Name*</p>
@@ -200,7 +200,7 @@
                                 </div>
                                 <div>
                                     <p class="text-white">Maid Number*</p>
-                                    <input class=" bg-inherit border border-solid w-[20vw] rounded-full pl-2" type="number" name="'maid_number" id="'maid_number" required>
+                                    <input class=" bg-inherit border border-solid w-[20vw] rounded-full pl-2" type="number" name="maid_number" id="maid_number" required>
                                 </div>
                             </div>
                             <div class="flex justify-around flex-wrap mt-2">
