@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'GET':
         """
@@ -24,6 +24,7 @@ def home():
         except Exception as e:
             return({"status": "error", "message": str(e)}), 500
 
+    return ('An Error Occur')
 
 
 @app.route('/drug', methods=['GET', 'POST'])

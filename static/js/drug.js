@@ -90,6 +90,7 @@ function addDoseTimes() {
         input.style.border = '2px solid white';
         input.style.borderRadius = '10px';
         input.style.backgroundColor = 'inherit';
+        input.style.color = 'white';
         input.type = 'time';
         input.name = `dose_time_${i}`;
         input.required = true;
