@@ -5,7 +5,7 @@
 <div class="m-3 rounded-lg">
     {% if participants %}
     <table class=" w-full text-center">
-        <thead class="bg-blue-900 text-white italic">
+        <thead class="bg-blue-950 text-white italic">
             <th class=" rounded-l-lg p-2">Participant List</th>
             <th class="p-2">Medical Records</th>
             <th class="rounded-r-lg p-2">Action</th>
@@ -14,21 +14,21 @@
             {% for participant in participants %}
             <tr>
                 <td class=" mt-2">
-                    <div class=" flex gap-2 items-center border border-solid shadow-black shadow-sm w-fit">
+                    <div class=" flex gap-2 items-center border border-solid shadow-black shadow-sm w-fit p-3 rounded-xl">
                         <div>
                             <img src="../static/image/profile_picture.png" class="ml-2" alt="profile pic">
                         </div>
                         <div class=" text-left font-semibold">
-                            <label class=" pr-[4.6vw]">Name:</label>
+                            <label class=" pr-10">Name:</label>
                             <span>{{ participant['Name'] }}</span>
                             <br>
-                            <label class="pr-[0.9vw]">Date of Birth:</label>
+                            <label class="pr-1">Date of Birth:</label>
                             <span>{{ participant['Date of Birth'] }}</span>
                             <br>
-                            <label class=" pr-[4.6vw]">Phone:</label>
+                            <label class=" pr-9">Phone:</label>
                             <span>{{ participant['Phone'] }}</span>
                             <br>
-                            <label class=" pr-[3.8vw]">Address:</label>
+                            <label class=" pr-7">Address:</label>
                             <span>{{ participant['Phone'] }}</span>
                         </div>
                     </div>

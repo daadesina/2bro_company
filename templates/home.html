@@ -10,36 +10,40 @@
     <title>2BRO COMPANY </title>
     
 </head>
-<body class=" bg-blue-950 text-sm">
+<body class=" bg-cover bg-center " style="background-image: url('../static/image/background.png'); font-size: 0.7rem">
     <div class="relative">
         <div class="" id="home_div">
             <div id="container" class=" flex gap-5 m-4 h-[94vh]">
                 <div 
                     id="left_side"
-                    class=" bg-white w-1/5  p-[1vw] rounded-2xl flex flex-col justify-between pt-3 pb-3"
+                    class=" bg-white w-1/6 p-3 rounded-3xl flex flex-col justify-between"
                     >
                         <div>
-                            <div class=" flex justify-center">
+                            <div class=" pt-2 pr-3 mr-3">
                                 <div>
                                     <div class=" flex justify-end mb-2">
-                                        <div class=" flex items-center gap-1">
-                                            <img src="../static/image/logo.png" alt="2BRO logo" class=" h-[1.3vw] m-[0.2]"/>
-                                            <a href="/" class=" text-blue-900 font-bold">2BRO COMPANY</a>
+                                        <div class=" flex items-center md:text-sm lg:text-lg font-mono w-full justify-between">
+                                            <div>
+                                                <img src="../static/image/logo.png" alt="2BRO logo" class=" h-[1.3vw] m-[0.2]"/>
+                                            </div>
+                                            <div>
+                                                <a href="/" class=" text-blue-950" style="font-weight: 900;">2BRO COMPANY</a>
+                                            </div>
                                         </div>
                                     </div>
                                     {% block theme %}
-                                    <div class=" flex justify-end ">
+                                    <div class=" flex justify-end mt-5">
                                         
-                                        <button id="theme_btn" class=" bg-blue-900 text-white p-[0.7vw] rounded-full flex gap-3">
-                                            <img src="../static/image/theme.png" alt="">
-                                            <p>Select theme</p>
+                                        <button id="theme_btn" class=" bg-blue-950 text-white p-1 rounded-full flex justify-around w-4/5 items-center">
+                                            <img src="../static/image/theme.png" class="h-[1vw]" alt="">
+                                            <p class=" text-sm">Select theme</p>
                                         </button>
                                         
                                     </div>
                                     {% endblock %}
                                 </div>
                             </div>
-                            <hr class=" mt-5 border-solid border-black mb-5"/>
+                            <hr class=" mt-6 border-solid border-black mb-5"/>
                             <div class="">
                                 <div>
                                     <div class=" flex justify-between" role="button" id="profile_btn">
@@ -53,7 +57,7 @@
                                     </div>
                                     <div class=" ml-[2.2vw]" id="profile_part">
                                         <a href="/">
-                                            <div class=" pt-2 pb-2 w-full">Participants</div>
+                                            <div class=" w-full">Participants</div>
                                         </a>
                                         <hr class="border-solid border-black" />
                                         <p>Daily Notes</p>
@@ -69,7 +73,7 @@
                                     </div>
                                     <div class=" ml-[2.2vw]" id="caregiver_part">
                                         <a href="/caregiver">
-                                            <div class=" pt-2 pb-2 w-full">Participants</div>
+                                            <div class=" w-full">Participants</div>
                                         </a>
                                     </div>
                                     <div class=" flex justify-between mt-3" role="button" id="settings_btn">
@@ -85,7 +89,7 @@
                             </div>
                         </div>
 
-                        <div class=" text-center border border-dotted border-black p-3 rounded-lg">
+                        <div class=" text-center border border-dotted border-blue-950 p-5 rounded-lg">
                             <div class=" flex justify-center mb-2">
                                 <img src="../static/image/user.png" alt="profile picture" class="">
                             </div>
@@ -107,27 +111,29 @@
                     id="right_side"
                     class=" w-4/5 flex flex-col justify-between"
                     >
-                    <div class=" bg-white mb-3 rounded-lg p-3">
-                        <div class=" flex justify-between items-center mb-2">
-                            <p class=" font-semibold text-blue-800">Hello, Emily</p>
-                            <i class="fa-regular fa-bell mr-[10vw]"></i>
+                    <div class=" bg-white mb-3 rounded-2xl pt-6 pr-5 pl-5 pb-2">
+                        <div class=" flex justify-between items-center mb-4">
+                            <p class=" font-bold text-blue-900 md:text-sm lg:text-lg">Hello, Emily</p>
+                            <img src="../static/image/bell.png" class="mr-[10vw]" alt="bell">
                         </div>
-                        <div class=" flex justify-between border border-solid p-1 items-center">
-                            <button class=" bg-blue-900 text-white rounded-lg p-1">
+                        <div class=" flex justify-between border border-solid p-1 rounded-lg items-center">
+                            <button class=" bg-blue-950 text-white rounded-lg p-3 font-semibold">
                                 {% block participant %}
                                 Participants
                                 {% endblock %}
                             </button>
-                            <div class=" border border-solid rounded-full ">
-                                <input type="search" name="search" id="" placeholder="Search" class=" rounded-full pl-3">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <div class=" border border-solid rounded-full border-black flex items-center gap-1 pr-3">
+                                <input type="search" name="search" id="" placeholder="Search" class=" rounded-full pl-3 h-8 w-72">
+                                <div>
+                                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
 
 
 
-                    <div class=" bg-white mb-3 rounded-lg p-2">
+                    <div class=" bg-white mb-3 rounded-xl p-2">
                         <div class="flex justify-between items-center ">
                             <div>
                                 {% block back %}
@@ -136,7 +142,7 @@
                             </div>
                             <div>
                                 {% block create %}
-                                <button class=" bg-blue-900 text-white p-2 rounded-lg" id="create_parti_btn">Create participant <span class="ml-1">+</span></button>
+                                <button class=" bg-blue-950 text-white p-2 rounded-lg" id="create_parti_btn">Create participant <span class="ml-1">+</span></button>
                                 {% endblock %}
                             </div>
                         </div>
@@ -144,7 +150,7 @@
 
 
 
-                    <div class=" bg-white rounded-lg h-full">
+                    <div class=" bg-white rounded-lg h-full overflow-auto ">
                         {% block content %}
                         
                         {% endblock %}
