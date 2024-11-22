@@ -7,24 +7,50 @@ CORS(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    if request.method == 'GET':
-        """
-        Fetch participants from the backend API and render them on profile.html
-        """
-        BACKEND_PARTICIPANT_API_URL = 'https://hospital-segment.onrender.com/participant/list'
+    """
+    Fetch participants from the backend API and render them on profile.html
+    """
+    BACKEND_PARTICIPANT_API_URL = 'https://hospital-segment.onrender.com/participant/list'
 
-        try:
-            response = requests.get(BACKEND_PARTICIPANT_API_URL)
-            if response.status_code == 200:
-                data = response.json()
-                participants = data.get("participants", [])
-            else:
-                participants = [] # for empty list if the API fails
-            return render_template('profile.html', participants=participants)
-        except Exception as e:
-            return({"status": "error", "message": str(e)}), 500
+    try:
+        response = requests.get(BACKEND_PARTICIPANT_API_URL)
+        if response.status_code == 200:
+            data = response.json()
+            participants = data.get("participants", [])
+        else:
+            participants = [] # for empty list if the API fails
+        return render_template('profile.html', participants=participants)
+    except Exception as e:
+        return({"status": "error", "message": str(e)}), 500
 
-    return ('An Error Occur')
+@app.route('/create_participant', methods=['POST'])
+def create_participant(caregiver_id):
+    BACKEND_PARTICIPANT_API = 'https://hospital-segment.onrender.com/participant/create'
+
+    if request.method == 'POST':
+        form_data = {
+            "caregiver": request.form.get('caregiver_id'),
+            "first_names": request.form.get('first_names'),
+            "middle_name_initial": request.form.get("middle_name_initial"),
+            "last_names": request.form.get('last_names'),
+            "gender": request.form.get('gender'),
+            "date_of_birth": request.form.get('date_of_birth'),
+            "legal_status": request.form.get('legal_status'),
+            "maid_number": request.form.get('maid_number'),
+            "ssn": request.form.get('ssn'),
+            "phone_number": request.form.get('phone_number'),
+            "address_1": request.form.get('address_1'),
+            "address_2": request.form.get('address_2'),
+            "city_state": request.form.get('city_state'),
+            "zip_code": request.form.get('zip_code')
+        }
+
+        response = requests.post(BACKEND_PARTICIPANT_API, data=form_data)
+        if response.status_code == 200:
+            return redirect(url_for('home'))
+        else:
+            return render_template('error.html', message=response.json().get('message'))
+    return render_template('home.html')
 
 
 @app.route('/drug', methods=['GET', 'POST'])
