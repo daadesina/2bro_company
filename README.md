@@ -90,13 +90,40 @@ Ensure you have the following installed:
 ## Routes
 
 
-Route	                    Methods	            Description
----------------------------------------------------------------------------------------------------------------------
-/	                        GET, POST	        Displays the list of participants fetched from the backend API.
-/create_participant	          POST	            Form to create a new participant.
-/drug	                    GET, POST	        Form to manage drug prescriptions.
-/success	                   GET	            Displays a success message after an action is completed.
-/error	                       GET	            Displays a generic error message.
-/prescription	               GET	            Displays the prescription template.
-/settings	                   GET	            Displays the settings page.
-/caregiver	                   GET	            Fetches and displays caregiver details from the backend API.
+<p>Route	                    Methods	            Description</p>
+<p>---------------------------------------------------------------------------------------------------------------</p>
+<ol>
+<li>/	                        GET, POST	        Displays the list of participants fetched from the backend API.</li>
+<li>/create_participant	          POST	            Form to create a new participant.<li>
+<li>/drug	                    GET, POST	        Form to manage drug prescriptions.</li>
+<li>/success	                   GET	            Displays a success message after an action is completed.</li>
+<li>/error	                       GET	            Displays a generic error message.</li>
+<li>/prescription	               GET	            Displays the prescription template.</li>
+<li>/settings	                   GET	            Displays the settings page.</li>
+<li>/caregiver	                   GET	            Fetches and displays caregiver details from the backend API.</li>
+</ol>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>School</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Adesina</td>
+            <td>24</td>
+            <td>Obafemi Awolowo University</td>
+        </tr>
+        <tr>
+            <td>Adesina</td>
+            <td>24</td>
+            <td>Obafemi Awolowo University</td>
+        </tr>
+        <tr>
+            <td>Adesina</td>
+            <td>24</td>
+            <td>Obafemi Awolowo University</td>
+        </tr>
+    </tbody>
+</table>
