@@ -89,41 +89,57 @@ Ensure you have the following installed:
 
 ## Routes
 
-
-<p>Route	                    Methods	            Description</p>
-<p>---------------------------------------------------------------------------------------------------------------</p>
-<ol>
-<li>/	                        GET, POST	        Displays the list of participants fetched from the backend API.</li>
-<li>/create_participant	          POST	            Form to create a new participant.<li>
-<li>/drug	                    GET, POST	        Form to manage drug prescriptions.</li>
-<li>/success	                   GET	            Displays a success message after an action is completed.</li>
-<li>/error	                       GET	            Displays a generic error message.</li>
-<li>/prescription	               GET	            Displays the prescription template.</li>
-<li>/settings	                   GET	            Displays the settings page.</li>
-<li>/caregiver	                   GET	            Fetches and displays caregiver details from the backend API.</li>
-</ol>
-
 <table>
     <thead>
-        <th>Name</th>
-        <th>Age</th>
-        <th>School</th>
+        <th>Route</th>
+        <th>Methods</th>
+        <th>Description</th>
     </thead>
     <tbody>
         <tr>
-            <td>Adesina</td>
-            <td>24</td>
-            <td>Obafemi Awolowo University</td>
+            <td>/</td>
+            <td>GET, POST</td>
+            <td>Displays the list of participants fetched from the backend API.</td>
         </tr>
         <tr>
-            <td>Adesina</td>
-            <td>24</td>
-            <td>Obafemi Awolowo University</td>
+            <td>/create_participant</td>
+            <td>POST</td>
+            <td>Form to create a new participant.</td>
         </tr>
         <tr>
-            <td>Adesina</td>
-            <td>24</td>
-            <td>Obafemi Awolowo University</td>
+            <td>/drug</td>
+            <td>GET, POST</td>
+            <td>Form to manage drug prescriptions.</td>
+        </tr>
+        <tr>
+            <td>/success</td>
+            <td>GET</td>
+            <td>Displays a success message after an action is completed.</td>
+        </tr>
+        <tr>
+            <td>/error</td>
+            <td>GET</td>
+            <td>Displays a generic error message.</td>
+        </tr>
+        <tr>
+            <td>/prescription</td>
+            <td>GET</td>
+            <td>Displays the prescription template.</td>
+        </tr>
+        <tr>
+            <td>/settings</td>
+            <td>GET</td>
+            <td>Displays the settings page.</td>
+        </tr>
+        <tr>
+            <td>/caregiver</td>
+            <td>GET</td>
+            <td>Fetches and displays caregiver details from the backend API.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
