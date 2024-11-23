@@ -7,7 +7,6 @@ This repository contains the frontend of a hospital management system built with
 - **Participant Management**: View, create, and manage participants.
 - **Caregiver Details**: Retrieve and display details of caregivers.
 - **Drug Prescription**: Handle drug prescription processes.
-- **Settings**: Configurable application settings.
 - **Dynamic Routing**: Routes for each functional module.
 - **Error Handling**: Custom error pages for better user experience.
 
@@ -45,8 +44,8 @@ Ensure you have the following installed:
 
 1. **Clone the repository**:
 
-   git clone https://github.com/daadesina/2bro_company.git
-   cd 2bro_company
+   - git clone https://github.com/daadesina/2bro_company.git
+   - cd 2bro_company
 
 2. **Create a virtual environment:**
 
