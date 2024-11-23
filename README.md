@@ -67,25 +67,25 @@ Ensure you have the following installed:
 
 ## Project Structure
 
-project/
-│
-├── static/               # Contains static files
-│   ├── css/              # CSS files
-│   ├── js/               # JavaScript files
-│   ├── images/           # Images and icons
-│
-├── templates/            # HTML templates
-│   ├── home.html         # Parent template
-│   ├── profile.html      # Participant profile page
-│   ├── drug.html         # Drug prescription form
-│   ├── caregiver.html    # Caregiver details
-│   ├── error.html        # Error page
-│   ├── settings.html     # Settings page
-|   ├── prescription.html #Prescription page
-│
-├── app.py                # Main Flask application logic
-├── requirements.txt      # Python dependencies
-├── README.md             # Project documentation
+<p>project/</p>
+<p>│</p>
+<p>├── static/               # Contains static files</p>
+<p>│   ├── css/              # CSS files</p>
+<p>│   ├── js/               # JavaScript files</p>
+<p>│   ├── images/           # Images and icons</p>
+<p>│</p>
+<p>├── templates/            # HTML templates</p>
+<p>│   ├── home.html         # Parent template</p>
+<p>│   ├── profile.html      # Participant profile page</p>
+<p>│   ├── drug.html         # Drug prescription form</p>
+<p>│   ├── caregiver.html    # Caregiver details</p>
+<p>│   ├── error.html        # Error page</p>
+<p>│   ├── settings.html     # Settings page</p>
+<p>|   ├── prescription.html #Prescription page</p>
+<p>│</p>
+<p>├── app.py                # Main Flask application logic</p>
+<p>├── requirements.txt      # Python dependencies</p>
+<p>├── README.md             # Project documentation</p>
 
 ## Routes
 
